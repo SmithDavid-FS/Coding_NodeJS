@@ -8,9 +8,14 @@ app.use(express.json());
 //default service call (actuator)
 app.get("/", (req,res,next)=>{
     res.status(200).json({
-        message: "service is up",
-    })
-})
+        message: "GET - SUCCESS (service is running)",
+        metadata: {
+            hostname: req.hostname,
+            method: req.method,
+        },
+    });
+});
+
 // cors
 //localhost:3000/example
 app.use("/", router);
