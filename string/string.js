@@ -2,7 +2,7 @@ const uppercase = (str) => {
     return str.toUpperCase();
 }
 //lowercase function to lowercase text
-const lowercase = (str) => str.toLowerCase()
+const lowercase = (str) => str.toLowerCase();
 
 module.exports = {
     uppercase,
